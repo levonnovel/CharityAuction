@@ -33,20 +33,20 @@
             </p>
 
             @{
-            var spanSecondtop = ViewBag.SecondTop.DeadLine - DateTime.Now;
+                var spanSecondtop = ViewBag.SecondTop.DeadLine - DateTime.Now;
             }
             @if (spanSecondtop.TotalMilliseconds >= 0)
             {
-            <b class="bottom-left">
+                <b class="bottom-left">
 
-                @CharrityAuction.Resource.Remains @spanSecondtop.Days @CharrityAuction.Resource.Day @spanSecondtop.Hours @CharrityAuction.Resource.Hours @spanSecondtop.Minutes @CharrityAuction.Resource.Minutes<br />
-            </b>
+                    @CharrityAuction.Resource.Remains @spanSecondtop.Days @CharrityAuction.Resource.Day @spanSecondtop.Hours @CharrityAuction.Resource.Hours @spanSecondtop.Minutes @CharrityAuction.Resource.Minutes<br />
+                </b>
 
             }
 
             else
             {
-            <b class="bottom-left passed">@Resource.LotDayPassed @Resource.PassedSecondString</b>
+                <b class="bottom-left passed">@Resource.LotDayPassed @Resource.PassedSecondString</b>
             }
             <img src="@ViewBag.SecondTop.ImageSource" style="width:100%;height:100%;" />
 
